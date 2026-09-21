@@ -1,4 +1,5 @@
 import ReadBtn from '@/components/BookDetails/ReadBtn';
+import WishlistBtn from '@/components/BookDetails/WishlistBtn';
 import { Ibook } from '@/types/BookType';
 import Image from 'next/image';
 import React from 'react';
@@ -120,9 +121,7 @@ const BookDetailsPage = async ( {params} : IBookDetailsPageProps) => {
       {/* Button */}
       <div className="card-actions gap-2 justify-end mt-4">
         <ReadBtn book= { book} />
-         <button className="btn btn-primary px-8">
-         Wishlist
-        </button>
+         <WishlistBtn book={book} />
       </div>
 
     </div>

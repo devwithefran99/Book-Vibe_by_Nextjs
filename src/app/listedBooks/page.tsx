@@ -3,12 +3,13 @@ import React, { useContext } from 'react';
 import { BooksContext } from '@/contexts/BooksContext';
 
 const ListedBooksPage = () => {
-    const { readBooks } = useContext(BooksContext) as { readBooks: unknown };
-    console.log(readBooks , " read Books");
+    const { readBooks , wishlist } = useContext(BooksContext) ;
+   
     
     return (
         <div>
-            listed Book
+            Total Read Books : {readBooks.length} <br /> 
+            Total Added Books : {wishlist.length}
         </div>
     );
 };
