@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const BookCard = ({ book }) => {
@@ -13,9 +15,11 @@ const BookCard = ({ book }) => {
           {book.category}
         </span>
 
-        <img
+        <Image
           src={book.image}
           alt={book.bookName}
+         width={800}
+         height ={600}
           className="h-full w-auto rounded-md object-cover shadow-md transition duration-500 group-hover:scale-105"
         />
       </div>
@@ -67,9 +71,11 @@ const BookCard = ({ book }) => {
             </p>
           </div>
 
+         <Link href={`/books/${book.bookId}`}>
           <button className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-green-700">
             View Details
           </button>
+         </Link>
 
         </div>
       </div>

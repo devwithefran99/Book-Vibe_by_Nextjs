@@ -1,14 +1,19 @@
 
+import Link from "next/link";
+
 const Navbar = () => {
   const links = [
     <li key="home">
-      <a className="font-medium hover:text-green-600">Home</a>
-    </li>,
-    <li key="listed-books">
-      <a className="font-medium hover:text-green-600">Listed Books</a>
+      <Link href="/" className="font-medium hover:text-green-600">Home</Link>
     </li>,
     <li key="pages-to-read">
-      <a className="font-medium hover:text-green-600">Pages to Read</a>
+      <Link href="/books" className="font-medium hover:text-green-600">All Books</Link>
+    </li>,
+    <li key="listed-books">
+      <Link href="/listedBooks" className="font-medium hover:text-green-600">Listed Books</Link>
+    </li>,
+    <li key="pages-to-read">
+      <Link href="/" className="font-medium hover:text-green-600">Pages to Read</Link>
     </li>,
   ];
 
